@@ -19,8 +19,14 @@ export default function SearchBar({ movieList, setMovieList }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const list = getMovies(movieTitle);
-    setMovieList(list);
+    getMovies(movieTitle)
+      .then((result) => {
+        console.log("RESULT: ", result);
+        setMovieList(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

@@ -13,6 +13,7 @@ export default async function getMovies(movieTitle) {
   })
     .then((response) => {
       console.log("SUCCESS: ", response.data.Search);
+      return response.data.Search;
     })
     .catch((error) => {
       console.log("ERROR: ", error);
