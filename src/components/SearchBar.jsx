@@ -8,8 +8,6 @@ export default function SearchBar({ movieList, setMovieList }) {
 
   const [movieTitle, setMovieTitle] = useState("");
 
-  console.log("LIST: ", movieList);
-
   const handleInputChange = (event) => {
     const target = event.target;
     const value = target.value;
@@ -23,6 +21,7 @@ export default function SearchBar({ movieList, setMovieList }) {
       .then((result) => {
         console.log("RESULT: ", result);
         setMovieList(result);
+        form.resetFields();
       })
       .catch((error) => {
         console.log(error);
@@ -31,7 +30,7 @@ export default function SearchBar({ movieList, setMovieList }) {
 
   return (
     <div>
-      <Form name="basic" initialValues={{ remember: true }}>
+      <Form form={form} name="basic" initialValues={{ remember: true }}>
         <Form.Item
           label="Movie title"
           name="movieTitle"
