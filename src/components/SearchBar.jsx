@@ -8,6 +8,8 @@ export default function SearchBar({ movieList, setMovieList }) {
 
   const [movieTitle, setMovieTitle] = useState("");
 
+  console.log("LIST: ", movieList);
+
   const handleInputChange = (event) => {
     const target = event.target;
     const value = target.value;
@@ -15,9 +17,14 @@ export default function SearchBar({ movieList, setMovieList }) {
     setMovieTitle(value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const list = getMovies(movieTitle);
+    setMovieList(list);
+  };
+
   return (
     <div>
-      {console.log("MOVIE TITLE: ", movieTitle)}
       <Form name="basic" initialValues={{ remember: true }}>
         <Form.Item
           label="Movie title"
@@ -28,13 +35,7 @@ export default function SearchBar({ movieList, setMovieList }) {
         </Form.Item>
 
         <Form.Item>
-          <Button
-            onClick={
-              (() => getMovies(movieTitle), console.log("LIST: ", movieList))
-            }
-            type="primary"
-            htmlType="submit"
-          >
+          <Button onClick={handleSubmit} type="primary" htmlType="submit">
             Search
           </Button>
         </Form.Item>
