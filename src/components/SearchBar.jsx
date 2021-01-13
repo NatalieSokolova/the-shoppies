@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Input, Button } from "antd";
+import getMovies from "../apis/useApiData";
 // import { SearchOutlined } from "@ant-design/icons";
 
 export default function SearchBar() {
@@ -26,7 +27,11 @@ export default function SearchBar() {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button
+            onClick={() => getMovies(movie)}
+            type="primary"
+            htmlType="submit"
+          >
             Search
           </Button>
         </Form.Item>
