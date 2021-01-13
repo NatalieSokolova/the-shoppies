@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function NominationsCard({ movieList }) {
+export default function NominationsCard({
+  movieList,
+  nominatedMovie,
+  setNominatedMovie,
+}) {
   console.log("LIST FROM RESULTS: ", movieList);
   return (
     <div>

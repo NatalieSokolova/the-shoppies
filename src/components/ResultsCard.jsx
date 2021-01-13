@@ -1,7 +1,11 @@
 import React from "react";
 import { Button } from "antd";
 
-export default function ResultsCard({ movieList }) {
+export default function ResultsCard({
+  movieList,
+  nominatedMovie,
+  setNominatedMovie,
+}) {
   console.log("LIST FROM RESULTS: ", movieList);
   return (
     <div>
