@@ -10,8 +10,12 @@ export default function NominationsCard({
   // console.log("nominatedMovies: ", nominatedMovies);
 
   const removeNomination = (id) => {
+    if (nominatedMovies.length === 5) {
+      console.log("HIDE BANNER AND ENABLE NOMINATE BTNS");
+    }
     const newList = nominatedMovies.filter((movie) => movie.imdbID !== id);
     setNominatedMovies(newList);
+
     // console.log("newList: ", newList);
     // console.log("id: ", id);
   };

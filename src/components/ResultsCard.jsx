@@ -10,7 +10,10 @@ export default function ResultsCard({
   // console.log("nominatedMovies: ", nominatedMovies);
 
   const nominateMovie = (movie) => {
-    setNominatedMovies((nominatedMovies) => nominatedMovies.concat(movie));
+    console.log("nominatedMovies length:", nominatedMovies.length);
+    nominatedMovies.length < 5
+      ? setNominatedMovies((nominatedMovies) => nominatedMovies.concat(movie))
+      : console.log("SHOW BANNER AND DISABLE NOMINATE BUTTONS");
   };
 
   return (
