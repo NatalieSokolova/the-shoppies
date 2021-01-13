@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import "./App.css";
 
 function App() {
+  const [movieList, setMovieList] = useState(null);
+
   return (
     <div>
-      <SearchBar />
+      <SearchBar movieList={movieList} setMovieList={setMovieList} />
     </div>
   );
 }
