@@ -2,12 +2,18 @@ import React from "react";
 import { Button } from "antd";
 
 export default function NominationsCard({
-  movieList,
   nominatedMovies,
   setNominatedMovies,
 }) {
-  console.log("LIST FROM RESULTS: ", movieList);
-  console.log("nominatedMovies: ", nominatedMovies);
+  // console.log("LIST FROM RESULTS: ", movieList);
+  // console.log("nominatedMovies: ", nominatedMovies);
+
+  const removeNomination = (id) => {
+    const newList = nominatedMovies.filter((movie) => movie.imdbID !== id);
+    setNominatedMovies(newList);
+    // console.log("newList: ", newList);
+    // console.log("id: ", id);
+  };
 
   return (
     <div>
@@ -20,7 +26,13 @@ export default function NominationsCard({
               <div>{nominatedMovie.Year}</div>
               <img src={nominatedMovie.Poster} alt={nominatedMovie.Title} />
             </div>
-            <Button type="primary" htmlType="submit">
+            <Button
+              onClick={() => {
+                removeNomination(nominatedMovie.imdbID);
+              }}
+              type="primary"
+              htmlType="submit"
+            >
               remove
             </Button>
           </div>

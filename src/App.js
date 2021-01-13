@@ -20,7 +20,6 @@ function App() {
         setNominatedMovies={setNominatedMovies}
       />
       <NominationsCard
-        movieList={movieList}
         nominatedMovies={nominatedMovies}
         setNominatedMovies={setNominatedMovies}
       />
