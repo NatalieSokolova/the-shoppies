@@ -1,21 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Input, Button } from "antd";
+// import { SearchOutlined } from "@ant-design/icons";
 
 export default function SearchBar() {
+  const [form] = Form.useForm();
+  const [movie, setMovie] = useState("");
   return (
     <div>
-      <Form
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-      >
+      <Form name="basic" initialValues={{ remember: true }}>
         <Form.Item
-          label="Username"
-          name="username"
+          label="Movie title"
+          name="movieTitle"
           rules={[{ required: true, message: "Please input the movie title!" }]}
         >
-          <Input />
+          <Input placeholder="movie title" />
         </Form.Item>
 
         <Form.Item>
