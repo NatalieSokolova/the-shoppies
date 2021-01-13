@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <SearchBar movieList={movieList} setMovieList={setMovieList} />
-      <ResultsCard movieList={movieList} setMovieList={setMovieList} />
+      <ResultsCard movieList={movieList} />
     </div>
   );
 }

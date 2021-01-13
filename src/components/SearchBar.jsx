@@ -19,7 +19,7 @@ export default function SearchBar({ movieList, setMovieList }) {
     event.preventDefault();
     getMovies(movieTitle)
       .then((result) => {
-        console.log("RESULT: ", result);
+        // console.log("RESULT: ", result);
         setMovieList(result);
         form.resetFields();
       })
