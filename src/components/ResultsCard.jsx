@@ -3,8 +3,8 @@ import { Button } from "antd";
 
 export default function ResultsCard({
   movieList,
-  nominatedMovie,
-  setNominatedMovie,
+  nominatedMovies,
+  setNominatedMovies,
 }) {
   console.log("LIST FROM RESULTS: ", movieList);
   return (

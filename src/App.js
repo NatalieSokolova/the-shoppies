@@ -6,23 +6,23 @@ import "./App.css";
 
 function App() {
   const [movieList, setMovieList] = useState("");
-  const [nominatedMovie, setNominatedMovie] = useState(false);
+  const [nominatedMovies, setNominatedMovies] = useState([]);
 
   console.log("LIST: ", movieList);
-  console.log("nominatedMovie: ", nominatedMovie);
+  console.log("nominatedMovies: ", nominatedMovies);
 
   return (
     <div>
       <SearchBar movieList={movieList} setMovieList={setMovieList} />
       <ResultsCard
         movieList={movieList}
-        nominatedMovie={nominatedMovie}
-        setNominatedMovie={setNominatedMovie}
+        nominatedMovies={nominatedMovies}
+        setNominatedMovies={setNominatedMovies}
       />
       <NominationsCard
         movieList={movieList}
-        nominatedMovie={nominatedMovie}
-        setNominatedMovie={setNominatedMovie}
+        nominatedMovies={nominatedMovies}
+        setNominatedMovies={setNominatedMovies}
       />
     </div>
   );
