@@ -12,6 +12,9 @@ export default function ResultsCard({
     setNominatedMovies((nominatedMovies) => nominatedMovies.concat(movie));
   };
 
+  // europeana-qi9jveT9X6A-unsplash-min.jpg
+  // src={require("../assets/top-min.jpg")}
+
   return (
     <div>
       {movieList ? (
@@ -20,7 +23,10 @@ export default function ResultsCard({
             <div>
               <div>{movieCard.Title}</div>
               <div>{movieCard.Year}</div>
-              <img src={movieCard.Poster} alt={movieCard.Title} />
+              <img
+                src={require("../assets/europeana-qi9jveT9X6A-unsplash-min.jpg")}
+                alt={movieCard.Title}
+              />
             </div>
             <Button
               onClick={() => nominateMovie(movieCard)}
