@@ -36,7 +36,10 @@ export default function SearchBar({ movieList, setMovieList }) {
           name="movieTitle"
           rules={[{ required: true, message: "Please input the movie title!" }]}
         >
-          <Input placeholder="movie title" onChange={handleInputChange} />
+          <Input
+            placeholder="search by movie title"
+            onChange={handleInputChange}
+          />
         </Form.Item>
 
         <Form.Item>

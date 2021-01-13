@@ -8,7 +8,7 @@ export default async function getMovies(movieTitle) {
     url: `https://www.omdbapi.com/?s=${movieTitle}&apikey=${API_KEY}`,
     params: {
       type: "movie",
-      // page: "1-5",
+      plot: "short",
     },
   })
     .then((response) => {
