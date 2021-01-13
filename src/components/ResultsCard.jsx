@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "antd";
 
 export default function ResultsCard({ movieList }) {
   console.log("LIST FROM RESULTS: ", movieList);
@@ -12,6 +13,9 @@ export default function ResultsCard({ movieList }) {
               <div>{movieCard.Year}</div>
               <img src={movieCard.Poster} alt={movieCard.Title} />
             </div>
+            <Button type="primary" htmlType="submit">
+              nominate
+            </Button>
           </div>
         ))
       ) : (
