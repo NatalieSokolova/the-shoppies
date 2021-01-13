@@ -1,19 +1,17 @@
 import React from "react";
 import { Button } from "antd";
+import poster from "../assets/mymind-KG_BfyEgXhk-unsplash.jpg";
 
 export default function ResultsCard({
   movieList,
   nominatedMovies,
   setNominatedMovies,
 }) {
-  console.log("nominatedMovies: ", nominatedMovies);
+  // console.log("nominatedMovies: ", nominatedMovies);
 
   const nominateMovie = (movie) => {
     setNominatedMovies((nominatedMovies) => nominatedMovies.concat(movie));
   };
-
-  // europeana-qi9jveT9X6A-unsplash-min.jpg
-  // src={require("../assets/top-min.jpg")}
 
   return (
     <div>
@@ -24,7 +22,7 @@ export default function ResultsCard({
               <div>{movieCard.Title}</div>
               <div>{movieCard.Year}</div>
               <img
-                src={require("../assets/europeana-qi9jveT9X6A-unsplash-min.jpg")}
+                src={movieCard.Poster !== "N/A" ? movieCard.Poster : poster}
                 alt={movieCard.Title}
               />
             </div>

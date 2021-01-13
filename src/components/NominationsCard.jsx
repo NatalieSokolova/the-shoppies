@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "antd";
+import poster from "../assets/mymind-KG_BfyEgXhk-unsplash.jpg";
 
 export default function NominationsCard({
   nominatedMovies,
@@ -24,7 +25,14 @@ export default function NominationsCard({
             <div>
               <div>{nominatedMovie.Title}</div>
               <div>{nominatedMovie.Year}</div>
-              <img src={nominatedMovie.Poster} alt={nominatedMovie.Title} />
+              <img
+                src={
+                  nominatedMovie.Poster !== "N/A"
+                    ? nominatedMovie.Poster
+                    : poster
+                }
+                alt={nominatedMovie.Title}
+              />
             </div>
             <Button
               onClick={() => {
