@@ -11,6 +11,7 @@ export default function NominationsCard({
 
   return (
     <div>
+      <div>My Nominations:</div>
       {nominatedMovies.length > 0 ? (
         nominatedMovies.map((nominatedMovie) => (
           <div key={nominatedMovie.imdbID}>

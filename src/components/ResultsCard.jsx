@@ -6,7 +6,7 @@ export default function ResultsCard({
   nominatedMovies,
   setNominatedMovies,
 }) {
-  console.log("LIST FROM RESULTS: ", movieList);
+  console.log("nominatedMovies: ", nominatedMovies);
   return (
     <div>
       {movieList ? (
@@ -17,7 +17,21 @@ export default function ResultsCard({
               <div>{movieCard.Year}</div>
               <img src={movieCard.Poster} alt={movieCard.Title} />
             </div>
-            <Button type="primary" htmlType="submit">
+            <Button
+              onClick={() =>
+                setNominatedMovies(nominatedMovies.concat(movieCard))
+              }
+              // onClick={() =>
+              //   setNominatedMovies((prev) => {
+              //     return {
+              //       ...prev,
+              //       movies: prev.push(movieCard),
+              //     };
+              //   })
+              // }
+              type="primary"
+              htmlType="submit"
+            >
               nominate
             </Button>
           </div>
