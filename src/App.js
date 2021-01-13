@@ -4,7 +4,9 @@ import ResultsCard from "./components/ResultsCard";
 import "./App.css";
 
 function App() {
-  const [movieList, setMovieList] = useState(null);
+  const [movieList, setMovieList] = useState("");
+  const [nominatedMovie, setNominatedMovie] = useState("");
+
   console.log("LIST: ", movieList);
 
   return (
