@@ -4,33 +4,38 @@ import getMovies from "../apis/useApiData";
 // import { SearchOutlined } from "@ant-design/icons";
 
 export default function SearchBar({ movieList, setMovieList }) {
-  const [form] = Form.useForm();
+  // const [form] = Form.useForm();
 
   const [movieTitle, setMovieTitle] = useState("");
 
   const handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-
-    setMovieTitle(value);
-  };
-
-  const handleSubmit = (event) => {
     event.preventDefault();
-    getMovies(movieTitle)
+
+    const target = event.target;
+    const title = target.value;
+
+    setMovieTitle(title);
+
+    getMovies(title)
       .then((result) => {
         // console.log("RESULT: ", result);
         setMovieList(result);
-        form.resetFields();
+        // form.resetFields();
       })
       .catch((error) => {
         console.log(error);
       });
+    console.log("movieTitle: ", title);
+    console.log("movieList: ", movieList);
   };
 
   return (
     <div>
-      <Form form={form} name="basic" initialValues={{ remember: true }}>
+      <Form
+        // form={form}
+        name="basic"
+        initialValues={{ remember: true }}
+      >
         <Form.Item
           label="Movie title"
           name="movieTitle"
@@ -40,12 +45,6 @@ export default function SearchBar({ movieList, setMovieList }) {
             placeholder="search by movie title"
             onChange={handleInputChange}
           />
-        </Form.Item>
-
-        <Form.Item>
-          <Button onClick={handleSubmit} type="primary" htmlType="submit">
-            Search
-          </Button>
         </Form.Item>
       </Form>
     </div>
