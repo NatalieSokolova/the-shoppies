@@ -19,16 +19,10 @@ export default function ResultsCard({
             </div>
             <Button
               onClick={() =>
-                setNominatedMovies(nominatedMovies.concat(movieCard))
+                setNominatedMovies((nominatedMovies) =>
+                  nominatedMovies.concat(movieCard)
+                )
               }
-              // onClick={() =>
-              //   setNominatedMovies((prev) => {
-              //     return {
-              //       ...prev,
-              //       movies: prev.push(movieCard),
-              //     };
-              //   })
-              // }
               type="primary"
               htmlType="submit"
             >
