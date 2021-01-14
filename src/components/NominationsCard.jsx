@@ -8,20 +8,13 @@ export default function NominationsCard({
   fullList,
   setFullList,
 }) {
-  // console.log("LIST FROM RESULTS: ", movieList);
-  // console.log("nominatedMovies: ", nominatedMovies);
-
-  console.log("fullList: ", fullList);
+  // console.log("fullList: ", fullList);
 
   const removeNomination = (id) => {
-    if (nominatedMovies.length === 5) {
-      console.log("HIDE BANNER AND ENABLE NOMINATE BTNS");
-    }
+    // console.log("nominatedMovies:", nominatedMovies);
     const newList = nominatedMovies.filter((movie) => movie.imdbID !== id);
     setNominatedMovies(newList);
-
-    // console.log("newList: ", newList);
-    // console.log("id: ", id);
+    setFullList(false);
   };
 
   return (
