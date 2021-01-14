@@ -7,9 +7,10 @@ import "./App.css";
 function App() {
   const [movieList, setMovieList] = useState("");
   const [nominatedMovies, setNominatedMovies] = useState([]);
+  const [fullList, setFullList] = useState(false);
 
-  console.log("LIST: ", movieList);
-  console.log("nominatedMovies: ", nominatedMovies);
+  // console.log("LIST: ", movieList);
+  // console.log("nominatedMovies: ", nominatedMovies);
 
   return (
     <div>
@@ -18,10 +19,14 @@ function App() {
         movieList={movieList}
         nominatedMovies={nominatedMovies}
         setNominatedMovies={setNominatedMovies}
+        fullList={fullList}
+        setFullList={setFullList}
       />
       <NominationsCard
         nominatedMovies={nominatedMovies}
         setNominatedMovies={setNominatedMovies}
+        fullList={fullList}
+        setFullList={setFullList}
       />
     </div>
   );

@@ -5,9 +5,13 @@ import poster from "../assets/mymind-KG_BfyEgXhk-unsplash.jpg";
 export default function NominationsCard({
   nominatedMovies,
   setNominatedMovies,
+  fullList,
+  setFullList,
 }) {
   // console.log("LIST FROM RESULTS: ", movieList);
   // console.log("nominatedMovies: ", nominatedMovies);
+
+  console.log("fullList: ", fullList);
 
   const removeNomination = (id) => {
     if (nominatedMovies.length === 5) {
