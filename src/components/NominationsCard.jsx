@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import poster from "../assets/mymind-KG_BfyEgXhk-unsplash.jpg";
+import Banner from "./Banner";
 
 export default function NominationsCard({
   nominatedMovies,
@@ -49,6 +50,7 @@ export default function NominationsCard({
       ) : (
         <div>Nominated movies go here</div>
       )}
+      {fullList ? <Banner /> : null}
     </div>
   );
 }
