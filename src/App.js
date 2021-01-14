@@ -9,9 +9,6 @@ function App() {
   const [nominatedMovies, setNominatedMovies] = useState([]);
   const [fullList, setFullList] = useState(false);
 
-  // console.log("LIST: ", movieList);
-  // console.log("nominatedMovies: ", nominatedMovies);
-
   return (
     <div>
       <SearchBar movieList={movieList} setMovieList={setMovieList} />

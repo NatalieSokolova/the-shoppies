@@ -9,10 +9,7 @@ export default function NominationsCard({
   fullList,
   setFullList,
 }) {
-  // console.log("fullList: ", fullList);
-
   const removeNomination = (id) => {
-    // console.log("nominatedMovies:", nominatedMovies);
     const newList = nominatedMovies.filter((movie) => movie.imdbID !== id);
     setNominatedMovies(newList);
     setFullList(false);

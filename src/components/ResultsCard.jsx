@@ -9,10 +9,7 @@ export default function ResultsCard({
   fullList,
   setFullList,
 }) {
-  // console.log("nominatedMovies: ", nominatedMovies);
-
   const nominateMovie = (movie) => {
-    // console.log("nominatedMovies length:", nominatedMovies.length);
     setNominatedMovies((nominatedMovies) => nominatedMovies.concat(movie));
     isListFull();
   };

@@ -8,11 +8,10 @@ export default async function getMovies(movieTitle) {
     url: `https://www.omdbapi.com/?s=${movieTitle}&apikey=${API_KEY}`,
     params: {
       type: "movie",
-      plot: "short",
     },
   })
     .then((response) => {
-      // console.log("SUCCESS: ", response.data.Search);
+      console.log("SUCCESS: ", response.data.Search);
       return response.data.Search;
     })
     .catch((error) => {

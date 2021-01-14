@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { Form, Input, Button } from "antd";
 import getMovies from "../apis/useApiData";
-// import { SearchOutlined } from "@ant-design/icons";
 
 export default function SearchBar({ movieList, setMovieList }) {
-  // const [form] = Form.useForm();
-
   const [movieTitle, setMovieTitle] = useState("");
 
   const handleInputChange = (event) => {
@@ -18,9 +15,7 @@ export default function SearchBar({ movieList, setMovieList }) {
 
     getMovies(title)
       .then((result) => {
-        // console.log("RESULT: ", result);
         setMovieList(result);
-        // form.resetFields();
       })
       .catch((error) => {
         console.log(error);
@@ -31,11 +26,7 @@ export default function SearchBar({ movieList, setMovieList }) {
 
   return (
     <div>
-      <Form
-        // form={form}
-        name="basic"
-        initialValues={{ remember: true }}
-      >
+      <Form name="basic" initialValues={{ remember: true }}>
         <Form.Item
           label="Movie title"
           name="movieTitle"
