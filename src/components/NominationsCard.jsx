@@ -55,7 +55,7 @@ export default function NominationsCard({
       ) : (
         <div>Nominated movies go here</div>
       )}
-      {disabledBtns ? <Banner /> : null}
+      {nominatedMovies.length === 5 ? <Banner /> : null}
     </div>
   );
 }
