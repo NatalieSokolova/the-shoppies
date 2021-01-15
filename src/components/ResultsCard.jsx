@@ -6,23 +6,24 @@ export default function ResultsCard({
   movieList,
   nominatedMovies,
   setNominatedMovies,
-  fullList,
-  setFullList,
+  disabledBtn,
+  setDisabledBtn,
 }) {
-  const nominateMovie = (movie) => {
+  const nominateMovie = (movie, index) => {
     setNominatedMovies((nominatedMovies) => nominatedMovies.concat(movie));
-    isListFull();
+    // isListFull();
+    setDisabledBtn((disabledBtn) => disabledBtn.concat(index));
   };
 
-  const isListFull = () => {
-    return nominatedMovies.length === 4 ? setFullList(true) : fullList;
-  };
+  // const isListFull = () => {
+  //   return nominatedMovies.length === 4 ? setDisabledBtn(true) : disabledBtn;
+  // };
 
   return (
     <div>
-      {console.log("fullList: ", fullList)}
+      {console.log("disabledBtn: ", disabledBtn)}
       {movieList ? (
-        movieList.map((movieCard) => (
+        movieList.map((movieCard, index) => (
           <div key={movieCard.imdbID}>
             <div>
               <div>{movieCard.Title}</div>
@@ -33,10 +34,14 @@ export default function ResultsCard({
               />
             </div>
             <Button
-              onClick={() => nominateMovie(movieCard)}
+              onClick={() => nominateMovie(movieCard, index)}
               type="primary"
               htmlType="submit"
-              disabled={fullList}
+              disabled={
+                nominatedMovies.length === 5
+                  ? true
+                  : disabledBtn.includes(index)
+              }
             >
               nominate
             </Button>

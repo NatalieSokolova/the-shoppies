@@ -6,13 +6,13 @@ import Banner from "./Banner";
 export default function NominationsCard({
   nominatedMovies,
   setNominatedMovies,
-  fullList,
-  setFullList,
+  disabledBtn,
+  setDisabledBtn,
 }) {
   const removeNomination = (id) => {
     const newList = nominatedMovies.filter((movie) => movie.imdbID !== id);
     setNominatedMovies(newList);
-    setFullList(false);
+    setDisabledBtn(false);
   };
 
   return (
@@ -47,7 +47,7 @@ export default function NominationsCard({
       ) : (
         <div>Nominated movies go here</div>
       )}
-      {fullList ? <Banner /> : null}
+      {disabledBtn ? <Banner /> : null}
     </div>
   );
 }
