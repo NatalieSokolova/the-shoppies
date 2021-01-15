@@ -27,20 +27,24 @@ function App() {
   return (
     <div>
       <Home />
-      <SearchBar movieList={movieList} setMovieList={setMovieList} />
-      <ResultsCard
-        movieList={movieList}
-        nominatedMovies={nominatedMovies}
-        setNominatedMovies={setNominatedMovies}
-        disabledBtns={disabledBtns}
-        setDisabledBtns={setDisabledBtns}
-      />
-      <NominationsCard
-        nominatedMovies={nominatedMovies}
-        setNominatedMovies={setNominatedMovies}
-        disabledBtns={disabledBtns}
-        setDisabledBtns={setDisabledBtns}
-      />
+      <div id="movieSection">
+        <SearchBar movieList={movieList} setMovieList={setMovieList} />
+        <div id="resultSection">
+          <ResultsCard
+            movieList={movieList}
+            nominatedMovies={nominatedMovies}
+            setNominatedMovies={setNominatedMovies}
+            disabledBtns={disabledBtns}
+            setDisabledBtns={setDisabledBtns}
+          />
+          <NominationsCard
+            nominatedMovies={nominatedMovies}
+            setNominatedMovies={setNominatedMovies}
+            disabledBtns={disabledBtns}
+            setDisabledBtns={setDisabledBtns}
+          />
+        </div>
+      </div>
     </div>
   );
 }

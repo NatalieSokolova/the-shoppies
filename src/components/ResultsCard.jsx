@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import poster from "../assets/mymind-KG_BfyEgXhk-unsplash.jpg";
+import "./ResultsCard.css";
 
 export default function ResultsCard({
   movieList,
@@ -28,16 +29,17 @@ export default function ResultsCard({
     <div>
       {movieList ? (
         movieList.map((movieCard) => (
-          <div key={movieCard.imdbID}>
-            <div>
-              <div>{movieCard.Title}</div>
-              <div>{movieCard.Year}</div>
-              <img
-                src={movieCard.Poster !== "N/A" ? movieCard.Poster : poster}
-                alt={movieCard.Title}
-              />
+          <div key={movieCard.imdbID} className="resultCard">
+            <img
+              className="resultCardImg"
+              alt={movieCard.Title}
+              src={movieCard.Poster !== "N/A" ? movieCard.Poster : poster}
+            />
+            <div className="movieInfo">
+              {movieCard.Title} | {movieCard.Year}
             </div>
             <Button
+              className="nominateBtn"
               onClick={() => nominateMovie(movieCard)}
               type="primary"
               htmlType="submit"
@@ -49,7 +51,6 @@ export default function ResultsCard({
             >
               nominate
             </Button>
-            <hr />
           </div>
         ))
       ) : (

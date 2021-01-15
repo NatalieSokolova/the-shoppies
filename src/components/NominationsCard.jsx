@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "antd";
 import poster from "../assets/mymind-KG_BfyEgXhk-unsplash.jpg";
 import Banner from "./Banner";
+import "./NominationsCard.css";
 
 export default function NominationsCard({
   nominatedMovies,

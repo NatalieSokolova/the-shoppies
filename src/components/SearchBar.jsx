@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Form, Input, Button } from "antd";
+import { Form, Input } from "antd";
 import getMovies from "../apis/useApiData";
+import "./SearchBar.css";
 
 export default function SearchBar({ movieList, setMovieList }) {
   const [movieTitle, setMovieTitle] = useState("");
@@ -28,7 +29,6 @@ export default function SearchBar({ movieList, setMovieList }) {
     <div id="searchBar">
       <Form name="basic" initialValues={{ remember: true }}>
         <Form.Item
-          label="Movie title"
           name="movieTitle"
           rules={[{ required: true, message: "Please input the movie title!" }]}
         >

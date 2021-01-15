@@ -1,0 +1,27 @@
+.resultCard {
+  width: 15vw;
+  margin: 1vh 1vh 5vh;
+  text-align: center;
+  display: inline-block;
+}
+
+.resultCardImg {
+  width: 100%;
+  cursor: pointer;
+}
+
+.nominateBtn {
+  width: 100%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.movieInfo {
+  height: 5vh;
+  font-size: 1.5vh;
+}
+
+.apiResults {
+  display: flex;
+  flex-direction: row;
+}

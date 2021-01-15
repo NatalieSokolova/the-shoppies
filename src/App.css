@@ -7,6 +7,17 @@
   pointer-events: none;
 }
 
+#movieSection {
+  width: 80vw;
+  margin: 0 10vw;
+}
+
+#resultSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
