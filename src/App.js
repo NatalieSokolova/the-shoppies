@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import ResultsCard from "./components/ResultsCard";
 import NominationsCard from "./components/NominationsCard";
+import Home from "./components/Home";
 import "./App.css";
 
 function App() {
   const [movieList, setMovieList] = useState("");
   const [disabledBtns, setDisabledBtns] = useState([]);
-  // const storedNominatedMovies = JSON.parse(
-  //   localStorage.getItem("nominatedMovies")
-  // );
   const [nominatedMovies, setNominatedMovies] = useState([]);
 
   useEffect(() => {
@@ -28,6 +26,7 @@ function App() {
 
   return (
     <div>
+      <Home />
       <SearchBar movieList={movieList} setMovieList={setMovieList} />
       <ResultsCard
         movieList={movieList}
