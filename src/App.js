@@ -6,17 +6,22 @@ import "./App.css";
 
 function App() {
   const [movieList, setMovieList] = useState("");
-  const storedNominatedMovies = JSON.parse(
-    localStorage.getItem("nominatedMovies")
-  );
-  const [nominatedMovies, setNominatedMovies] = useState(
-    storedNominatedMovies || []
-  );
   const [disabledBtns, setDisabledBtns] = useState([]);
+  // const storedNominatedMovies = JSON.parse(
+  //   localStorage.getItem("nominatedMovies")
+  // );
+  const [nominatedMovies, setNominatedMovies] = useState([]);
+
+  useEffect(() => {
+    const nominatedMovies = JSON.parse(localStorage.getItem("nominatedMovies"));
+    if (nominatedMovies) {
+      setNominatedMovies(nominatedMovies);
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("nominatedMovies", JSON.stringify(nominatedMovies));
-  });
+  }, [nominatedMovies]);
 
   console.log("disabledBtns: ", disabledBtns);
   console.log("nominatedMovies: ", nominatedMovies);
