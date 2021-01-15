@@ -30,11 +30,16 @@ export default function ResultsCard({
       {movieList ? (
         movieList.map((movieCard) => (
           <div key={movieCard.imdbID} className="resultCard">
-            <img
-              className="resultCardImg"
-              alt={movieCard.Title}
-              src={movieCard.Poster !== "N/A" ? movieCard.Poster : poster}
-            />
+            <a
+              href={`https://www.imdb.com/title/${movieCard.imdbID}/`}
+              target="_blank"
+            >
+              <img
+                className="resultCardImg"
+                alt={movieCard.Title}
+                src={movieCard.Poster !== "N/A" ? movieCard.Poster : poster}
+              />
+            </a>
             <div className="movieInfo">
               {movieCard.Title} | {movieCard.Year}
             </div>

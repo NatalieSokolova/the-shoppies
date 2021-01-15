@@ -35,14 +35,19 @@ export default function NominationsCard({
             <div>
               <div>{nominatedMovie.Title}</div>
               <div>{nominatedMovie.Year}</div>
-              <img
-                src={
-                  nominatedMovie.Poster !== "N/A"
-                    ? nominatedMovie.Poster
-                    : poster
-                }
-                alt={nominatedMovie.Title}
-              />
+              <a
+                href={`https://www.imdb.com/title/${nominatedMovie.imdbID}/`}
+                target="_blank"
+              >
+                <img
+                  src={
+                    nominatedMovie.Poster !== "N/A"
+                      ? nominatedMovie.Poster
+                      : poster
+                  }
+                  alt={nominatedMovie.Title}
+                />
+              </a>
             </div>
             <Button
               onClick={() => removeNomination(nominatedMovie)}
