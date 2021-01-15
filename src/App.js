@@ -7,7 +7,10 @@ import "./App.css";
 function App() {
   const [movieList, setMovieList] = useState("");
   const [nominatedMovies, setNominatedMovies] = useState([]);
-  const [disabledBtn, setDisabledBtn] = useState([]);
+  const [disabledBtns, setDisabledBtns] = useState([]);
+
+  console.log("disabledBtns: ", disabledBtns);
+  console.log("nominatedMovies: ", nominatedMovies);
 
   return (
     <div>
@@ -16,14 +19,14 @@ function App() {
         movieList={movieList}
         nominatedMovies={nominatedMovies}
         setNominatedMovies={setNominatedMovies}
-        disabledBtn={disabledBtn}
-        setDisabledBtn={setDisabledBtn}
+        disabledBtns={disabledBtns}
+        setDisabledBtns={setDisabledBtns}
       />
       <NominationsCard
         nominatedMovies={nominatedMovies}
         setNominatedMovies={setNominatedMovies}
-        disabledBtn={disabledBtn}
-        setDisabledBtn={setDisabledBtn}
+        disabledBtns={disabledBtns}
+        setDisabledBtns={setDisabledBtns}
       />
     </div>
   );

@@ -6,13 +6,23 @@ import Banner from "./Banner";
 export default function NominationsCard({
   nominatedMovies,
   setNominatedMovies,
-  disabledBtn,
-  setDisabledBtn,
+  disabledBtns,
+  setDisabledBtns,
 }) {
-  const removeNomination = (id) => {
-    const newList = nominatedMovies.filter((movie) => movie.imdbID !== id);
-    setNominatedMovies(newList);
-    setDisabledBtn(false);
+  const removeNomination = (movie) => {
+    console.log("REMOVE ID: ", movie.imdbID);
+    const newMovieList = nominatedMovies.filter(
+      (removedMovie) => removedMovie.imdbID !== movie.imdbID
+    );
+    const newBtnList = disabledBtns.filter(
+      (movieId) => movieId !== movie.imdbID
+    );
+    const result = {
+      movies: setNominatedMovies(newMovieList),
+      buttons: setDisabledBtns(newBtnList),
+    };
+
+    return result;
   };
 
   return (
@@ -34,9 +44,7 @@ export default function NominationsCard({
               />
             </div>
             <Button
-              onClick={() => {
-                removeNomination(nominatedMovie.imdbID);
-              }}
+              onClick={() => removeNomination(nominatedMovie)}
               type="primary"
               htmlType="submit"
             >
@@ -47,7 +55,7 @@ export default function NominationsCard({
       ) : (
         <div>Nominated movies go here</div>
       )}
-      {disabledBtn ? <Banner /> : null}
+      {disabledBtns ? <Banner /> : null}
     </div>
   );
 }
