@@ -10,6 +10,7 @@ function App() {
   const [disabledBtns, setDisabledBtns] = useState([]);
   const [nominatedMovies, setNominatedMovies] = useState([]);
 
+  // uses localStorage to save the nominated movies and display them after page is refreshed
   useEffect(() => {
     const nominatedMovies = JSON.parse(localStorage.getItem("nominatedMovies"));
     if (nominatedMovies) {
@@ -21,15 +22,12 @@ function App() {
     localStorage.setItem("nominatedMovies", JSON.stringify(nominatedMovies));
   }, [nominatedMovies]);
 
-  console.log("disabledBtns: ", disabledBtns);
-  console.log("nominatedMovies: ", nominatedMovies);
-
   return (
-    <div>
+    <article>
       <Home />
-      <div id="movieSection">
+      <article id="movieSection">
         <SearchBar movieList={movieList} setMovieList={setMovieList} />
-        <div id="resultSection">
+        <article id="resultSection">
           <ResultsCard
             movieList={movieList}
             nominatedMovies={nominatedMovies}
@@ -44,9 +42,9 @@ function App() {
             disabledBtns={disabledBtns}
             setDisabledBtns={setDisabledBtns}
           />
-        </div>
-      </div>
-    </div>
+        </article>
+      </article>
+    </article>
   );
 }
 

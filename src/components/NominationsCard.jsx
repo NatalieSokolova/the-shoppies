@@ -11,8 +11,8 @@ export default function NominationsCard({
   disabledBtns,
   setDisabledBtns,
 }) {
+  // onClick removes a movie from the nominatedMovies array
   const removeNomination = (movie) => {
-    console.log("REMOVE ID: ", movie.imdbID);
     const newMovieList = nominatedMovies.filter(
       (removedMovie) => removedMovie.imdbID !== movie.imdbID
     );

@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "antd";
 import poster from "../assets/the_shoppies_noposter-01.png";
-import border from "../assets/the_shopies_underline-01.png";
 import "./ResultsCard.css";
 
 export default function ResultsCard({
@@ -11,6 +10,7 @@ export default function ResultsCard({
   disabledBtns,
   setDisabledBtns,
 }) {
+  // onClick adds a movie to the nominatedMovies array
   const nominateMovie = (movie) => {
     const result = {
       movies: setNominatedMovies((nominatedMovies) =>

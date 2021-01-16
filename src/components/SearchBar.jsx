@@ -12,17 +12,18 @@ export default function SearchBar({ movieList, setMovieList }) {
     const target = event.target;
     const title = target.value;
 
+    // ensures live search
     setMovieTitle(title);
 
+    // fetches movie data from OMDB api
     getMovies(title)
       .then((result) => {
+        // sets the movies to display them as a result of request
         setMovieList(result);
       })
       .catch((error) => {
         console.log(error);
       });
-    console.log("movieTitle: ", title);
-    console.log("movieList: ", movieList);
   };
 
   return (
