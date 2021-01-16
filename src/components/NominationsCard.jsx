@@ -65,7 +65,7 @@ export default function NominationsCard({
           </article>
         ))
       ) : (
-        <h4>You haven't nominated any movies yet</h4>
+        <h1>You haven't nominated any movies yet</h1>
       )}
       {nominatedMovies.length === 5 ? <Banner /> : null}
     </article>
