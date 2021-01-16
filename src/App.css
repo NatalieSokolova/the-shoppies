@@ -4,7 +4,7 @@
 
 body {
   background-color: black;
-  color: white;
+  color: #e2e2e3;
 }
 
 .App-logo {
@@ -21,6 +21,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.ant-btn-primary {
+  background-color: #e2e2e3;
 }
 
 @media (prefers-reduced-motion: no-preference) {

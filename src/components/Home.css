@@ -1,8 +1,20 @@
 .homePage {
   height: 100vh;
+  /* background-image: url("../assets/the_shoppies_logo-01.png");
+  background-size: 100vh 100vh; */
 }
 
 .linkToSearch {
-  margin-top: 80vh;
+  margin-top: 10vh;
   text-align: center;
+}
+
+.linkToSearch > a {
+  color: #e2e2e3;
+  text-decoration: none;
+}
+
+.logo {
+  width: 45vw;
+  margin: 10vh 27.5vw 5vh;
 }

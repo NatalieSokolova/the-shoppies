@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import poster from "../assets/the_shoppies_noposter-01.png";
+import border from "../assets/the_shopies_underline-01.png";
 import Banner from "./Banner";
 import "./NominationsCard.css";
 
@@ -29,7 +30,7 @@ export default function NominationsCard({
   return (
     <div className="nominations">
       <h2>My Nominations:</h2>
-      <br />
+      <img src={border} alt="border" className="border" />
       {nominatedMovies.length > 0 ? (
         nominatedMovies.map((nominatedMovie) => (
           <div key={nominatedMovie.imdbID} className="nominationCard">
@@ -66,7 +67,7 @@ export default function NominationsCard({
           </div>
         ))
       ) : (
-        <div>Nominated movies go here</div>
+        <h4>You haven't nominated any movies yet</h4>
       )}
       {nominatedMovies.length === 5 ? <Banner /> : null}
     </div>
