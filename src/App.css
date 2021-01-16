@@ -36,6 +36,10 @@ div {
   font-family: "Oswald", sans-serif;
 }
 
+img {
+  transition: 0.5s ease;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

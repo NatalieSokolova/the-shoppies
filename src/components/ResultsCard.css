@@ -23,8 +23,9 @@
 .movieInfo {
   font-size: 1.5vh;
   text-align: center;
-  padding: 1vh;
+  padding: 2vh;
   height: 3vh;
+  overflow: scroll;
 }
 
 .apiResults {

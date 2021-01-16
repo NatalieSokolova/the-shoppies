@@ -17,6 +17,7 @@
 
 .nominatedInfo {
   width: 100%;
+  overflow: scroll;
 }
 
 .border {
