@@ -27,19 +27,20 @@ export default function NominationsCard({
   };
 
   return (
-    <div>
-      <div>My Nominations:</div>
+    <div className="nominations">
+      <h2>My Nominations:</h2>
+      <br />
       {nominatedMovies.length > 0 ? (
         nominatedMovies.map((nominatedMovie) => (
-          <div key={nominatedMovie.imdbID}>
+          <div key={nominatedMovie.imdbID} className="nominationCard">
             <div>
-              <div>{nominatedMovie.Title}</div>
-              <div>{nominatedMovie.Year}</div>
               <a
                 href={`https://www.imdb.com/title/${nominatedMovie.imdbID}/`}
                 target="_blank"
+                rel="noreferrer"
               >
                 <img
+                  className="nominatedMoviePoster"
                   src={
                     nominatedMovie.Poster !== "N/A"
                       ? nominatedMovie.Poster
@@ -49,7 +50,13 @@ export default function NominationsCard({
                 />
               </a>
             </div>
+            <div className="nominatedInfo">
+              <div className="movieInfo">
+                {nominatedMovie.Title} | {nominatedMovie.Year}
+              </div>
+            </div>
             <Button
+              className="nominateBtn"
               onClick={() => removeNomination(nominatedMovie)}
               type="primary"
               htmlType="submit"

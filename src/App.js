@@ -38,6 +38,7 @@ function App() {
             setDisabledBtns={setDisabledBtns}
           />
           <NominationsCard
+            className="nominations"
             nominatedMovies={nominatedMovies}
             setNominatedMovies={setNominatedMovies}
             disabledBtns={disabledBtns}

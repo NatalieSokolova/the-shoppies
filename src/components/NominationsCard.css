@@ -1,0 +1,19 @@
+.nominations {
+  width: 35%;
+  text-align: center;
+}
+
+.nominationCard {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.5vh;
+  align-items: center;
+}
+
+.nominatedMoviePoster {
+  width: 7.5vw;
+}
+
+.nominatedInfo {
+  width: 100%;
+}

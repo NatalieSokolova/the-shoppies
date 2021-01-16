@@ -26,16 +26,17 @@ export default function ResultsCard({
   };
 
   return (
-    <div>
+    <div className="results">
       {movieList ? (
         movieList.map((movieCard) => (
           <div key={movieCard.imdbID} className="resultCard">
             <a
               href={`https://www.imdb.com/title/${movieCard.imdbID}/`}
               target="_blank"
+              rel="noreferrer"
             >
               <img
-                className="resultCardImg"
+                className="resultMoviePoster"
                 alt={movieCard.Title}
                 src={movieCard.Poster !== "N/A" ? movieCard.Poster : poster}
               />
