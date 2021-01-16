@@ -28,13 +28,13 @@ export default function NominationsCard({
   };
 
   return (
-    <div className="nominations">
+    <article className="nominations">
       <h1>My Nominations:</h1>
       <img src={border} alt="border" className="border" />
       {nominatedMovies.length > 0 ? (
         nominatedMovies.map((nominatedMovie) => (
-          <div key={nominatedMovie.imdbID} className="nominationCard">
-            <div>
+          <article key={nominatedMovie.imdbID} className="nominationCard">
+            <section>
               <a
                 href={`https://www.imdb.com/title/${nominatedMovie.imdbID}/`}
                 target="_blank"
@@ -50,12 +50,10 @@ export default function NominationsCard({
                   alt={nominatedMovie.Title}
                 />
               </a>
-            </div>
-            <div className="nominatedInfo">
-              <div className="movieInfo">
-                {nominatedMovie.Title} | {nominatedMovie.Year}
-              </div>
-            </div>
+            </section>
+            <section className="movieInfo">
+              {nominatedMovie.Title} | {nominatedMovie.Year}
+            </section>
             <Button
               className="nominateBtn"
               onClick={() => removeNomination(nominatedMovie)}
@@ -64,12 +62,12 @@ export default function NominationsCard({
             >
               remove
             </Button>
-          </div>
+          </article>
         ))
       ) : (
         <h4>You haven't nominated any movies yet</h4>
       )}
       {nominatedMovies.length === 5 ? <Banner /> : null}
-    </div>
+    </article>
   );
 }

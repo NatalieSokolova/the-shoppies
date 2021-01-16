@@ -13,7 +13,7 @@ body {
 }
 
 #movieSection {
-  width: 80vw;
+  width: 80%;
   margin: 0 10vw;
 }
 
@@ -30,9 +30,11 @@ body {
 
 h1 {
   font-family: "Allura", cursive;
+  font-size: 2.5vh;
 }
 
-div {
+article,
+section {
   font-family: "Oswald", sans-serif;
 }
 

@@ -26,7 +26,7 @@ export default function SearchBar({ movieList, setMovieList }) {
   };
 
   return (
-    <div id="searchBar">
+    <article id="searchBar">
       <Form name="basic" initialValues={{ remember: true }}>
         <Form.Item
           name="movieTitle"
@@ -38,6 +38,6 @@ export default function SearchBar({ movieList, setMovieList }) {
           />
         </Form.Item>
       </Form>
-    </div>
+    </article>
   );
 }

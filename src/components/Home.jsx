@@ -4,12 +4,11 @@ import "./Home.css";
 
 export default function Home() {
   return (
-    <div className="homePage">
-      {/* <div className="logo">Logo banner goes here</div> */}
+    <article className="homePage">
       <img className="logo" alt="shoppiesLogo" src={logo} />
       <a href="#searchBar">
         <h1 className="linkToSearch">Nominate Movies</h1>
       </a>
-    </div>
+    </article>
   );
 }

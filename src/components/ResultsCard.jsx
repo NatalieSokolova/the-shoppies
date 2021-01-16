@@ -25,10 +25,10 @@ export default function ResultsCard({
   };
 
   return (
-    <div className="results">
+    <article className="results">
       {movieList
         ? movieList.map((movieCard) => (
-            <div key={movieCard.imdbID} className="resultCard">
+            <article key={movieCard.imdbID} className="resultCard">
               <a
                 href={`https://www.imdb.com/title/${movieCard.imdbID}/`}
                 target="_blank"
@@ -40,9 +40,9 @@ export default function ResultsCard({
                   src={movieCard.Poster !== "N/A" ? movieCard.Poster : poster}
                 />
               </a>
-              <div className="movieInfo">
+              <section className="movieInfo">
                 {movieCard.Title} | {movieCard.Year}
-              </div>
+              </section>
               <Button
                 className="nominateBtn"
                 onClick={() => nominateMovie(movieCard)}
@@ -56,9 +56,9 @@ export default function ResultsCard({
               >
                 nominate
               </Button>
-            </div>
+            </article>
           ))
         : null}
-    </div>
+    </article>
   );
 }
