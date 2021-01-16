@@ -1,5 +1,5 @@
 .resultCard {
-  width: 15vw;
+  width: 30%;
   margin: 1vh 1vh 5vh;
   text-align: center;
   display: inline-block;
@@ -27,13 +27,19 @@
   min-height: 5vh;
 }
 
-.apiResults {
-  display: flex;
-  flex-direction: row;
+.results {
+  width: 65%;
+  margin-left: -1vh;
+  text-align: left;
 }
 
-.results {
-  width: 50%;
-  margin-left: -1vh;
-  text-align: center;
+@media only screen and (max-width: 900px) {
+  .resultCard {
+    width: 30vw;
+    /* margin: 1vh 1vh 5vh;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid #daa520;
+    padding: 10px; */
+  }
 }
