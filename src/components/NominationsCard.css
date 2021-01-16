@@ -8,6 +8,7 @@
   flex-direction: row;
   margin-bottom: 2.5vh;
   align-items: center;
+  border: 2px solid #daa520;
 }
 
 .nominatedMoviePoster {

@@ -3,11 +3,14 @@
   margin: 1vh 1vh 5vh;
   text-align: center;
   display: inline-block;
+  border: 2px solid #daa520;
 }
 
 .resultMoviePoster {
+  height: 27.5vh;
   width: 100%;
   cursor: pointer;
+  object-fit: contain;
 }
 
 .nominateBtn {
@@ -21,6 +24,7 @@
   font-size: 1.5vh;
   text-align: center;
   padding: 1vh;
+  height: 3vh;
 }
 
 .apiResults {
