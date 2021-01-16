@@ -1,10 +1,10 @@
 # The Shoppies: Movie awards for entrepreneurs
 
-The Shoppies is an app to help manage movie nominations for the upcoming Shoppies.
+The Shoppies is a simple app, built with React, to help manage movie nominations for the upcoming Shoppies.
 
 ## Deployed Site
 
-Deployed app: [https://the-shoppies-natalie-sokolova.netlify.app/](https://the-shoppies-natalie-sokolova.netlify.app/)
+Plese, follow this link to see the app in action: [https://the-shoppies-natalie-sokolova.netlify.app/](https://the-shoppies-natalie-sokolova.netlify.app/)
 
 ### Walk Through
 
