@@ -4,10 +4,10 @@
   text-align: center;
   display: inline-block;
   border: 2px solid #daa520;
+  padding: 10px;
 }
 
 .resultMoviePoster {
-  height: 27.5vh;
   width: 100%;
   cursor: pointer;
   object-fit: contain;
@@ -24,8 +24,7 @@
   font-size: 1.5vh;
   text-align: center;
   padding: 2vh;
-  height: 3vh;
-  overflow: scroll;
+  min-height: 5vh;
 }
 
 .apiResults {

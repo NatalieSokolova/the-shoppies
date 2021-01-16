@@ -1,5 +1,5 @@
 .nominations {
-  width: 35%;
+  width: 37.5%;
   text-align: center;
 }
 
@@ -9,10 +9,12 @@
   margin-bottom: 2.5vh;
   align-items: center;
   border: 2px solid #daa520;
+  padding: 10px;
 }
 
 .nominatedMoviePoster {
   width: 7.5vw;
+  vertical-align: middle;
 }
 
 .nominatedInfo {
