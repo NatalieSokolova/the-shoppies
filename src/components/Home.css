@@ -10,9 +10,9 @@ footer {
   width: 30%;
   height: 4vh;
   background-color: #daa520;
-  /* margin-top: 2.5vh; */
   font-family: "Oswald", sans-serif;
   font-size: 2vh;
+  cursor: pointer;
 }
 
 a {

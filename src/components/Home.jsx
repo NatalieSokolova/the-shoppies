@@ -8,11 +8,9 @@ export default function Home() {
       <img className="logo" alt="shoppiesLogo" src={logo} />
       <footer>
         <h1>Movie awards for entrepreneurs</h1>
-        <button className="linkBtn">
-          <a href="#searchBar" className="linkToSearch">
-            Nominate Movies
-          </a>
-        </button>
+        <a href="#searchBar">
+          <button className="linkBtn">Nominate Movies</button>
+        </a>
       </footer>
     </article>
   );
