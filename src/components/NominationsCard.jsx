@@ -29,7 +29,7 @@ export default function NominationsCard({
 
   return (
     <div className="nominations">
-      <h2>My Nominations:</h2>
+      <h1>My Nominations:</h1>
       <img src={border} alt="border" className="border" />
       {nominatedMovies.length > 0 ? (
         nominatedMovies.map((nominatedMovie) => (

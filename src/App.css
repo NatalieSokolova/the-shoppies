@@ -25,6 +25,15 @@ body {
 
 .ant-btn-primary {
   background-color: #e2e2e3;
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-family: "Allura", cursive;
+}
+
+div {
+  font-family: "Oswald", sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {

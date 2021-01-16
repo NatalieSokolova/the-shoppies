@@ -9,7 +9,7 @@ export default function Home() {
       <img className="logo" alt="shoppiesLogo" src={logo} />
       <div className="linkToSearch">
         <a href="#searchBar">
-          <h2>Nominate Movies</h2>
+          <h1>Nominate Movies</h1>
         </a>
       </div>
     </div>
