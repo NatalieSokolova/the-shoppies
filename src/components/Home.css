@@ -2,19 +2,27 @@
   height: 100vh;
 }
 
-a {
-  text-decoration: none;
+footer {
+  text-align: center;
 }
 
-.linkToSearch {
-  color: #e2e2e3;
-  margin-top: 5vh;
-  text-align: center;
+.linkBtn {
+  width: 30%;
+  height: 4vh;
+  background-color: #daa520;
+  /* margin-top: 2.5vh; */
+  font-family: "Oswald", sans-serif;
+  font-size: 2vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .logo {
   width: 40vw;
-  margin: 7.5vh 30vw;
+  margin: 7.5vh 30vw 0;
 }
 
 @media only screen and (max-width: 1000px) {
