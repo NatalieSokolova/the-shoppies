@@ -4,7 +4,7 @@ The Shoppies is an app to help manage movie nominations for the upcoming Shoppie
 
 ## Deployed Site
 
-!["deployed site"](https://the-shoppies-natalie-sokolova.netlify.app/)
+Deployed app: [deployed site](https://the-shoppies-natalie-sokolova.netlify.app/)
 
 ### Walk Through
 
