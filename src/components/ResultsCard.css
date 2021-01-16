@@ -25,6 +25,7 @@
   text-align: center;
   padding: 2vh;
   min-height: 5vh;
+  overflow: scroll;
 }
 
 .results {
@@ -33,13 +34,14 @@
   text-align: left;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .resultCard {
-    width: 30vw;
-    /* margin: 1vh 1vh 5vh;
-    text-align: center;
-    display: inline-block;
-    border: 2px solid #daa520;
-    padding: 10px; */
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .results {
+    width: 60%;
   }
 }

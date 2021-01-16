@@ -1,20 +1,32 @@
 .homePage {
   height: 100vh;
-  /* background-image: url("../assets/the_shoppies_logo-01.png");
-  background-size: 100vh 100vh; */
 }
 
-.linkToSearch {
-  margin-top: 10vh;
-  text-align: center;
-}
-
-.linkToSearch > a {
-  color: #e2e2e3;
+a {
   text-decoration: none;
 }
 
+.linkToSearch {
+  color: #e2e2e3;
+  margin-top: 7.5vh;
+  text-align: center;
+}
+
 .logo {
-  width: 45vw;
-  margin: 10vh 27.5vw 5vh;
+  width: 40vw;
+  margin: 7.5vh 30vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  .logo {
+    width: 50vw;
+    margin: 12.5vh 25vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    width: 70vw;
+    margin: 15vh 15vw;
+  }
 }
