@@ -4,7 +4,7 @@ import getMovies from "../apis/useApiData";
 import "./SearchBar.css";
 
 export default function SearchBar({ movieList, setMovieList }) {
-  const [movieTitle, setMovieTitle] = useState("");
+  const [setMovieTitle] = useState("");
 
   const handleInputChange = (event) => {
     event.preventDefault();
